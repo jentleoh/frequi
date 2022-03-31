@@ -1,7 +1,7 @@
 <template>
   <div>
     <form ref="form" novalidate @submit.stop.prevent="handleSubmit" @reset="handleReset">
-      <b-form-group label="Bot Name" label-for="name-input">
+      <b-form-group :label="$t('message.botname')" label-for="name-input">
         <b-form-input
           id="name-input"
           v-model="auth.botName"
@@ -11,7 +11,7 @@
       </b-form-group>
       <b-form-group
         :state="urlState"
-        label="API Url"
+        :label="$t('message.apiurl')"
         label-for="url-input"
         invalid-feedback="API Url required"
       >
@@ -25,7 +25,7 @@
       </b-form-group>
       <b-form-group
         :state="nameState"
-        label="Username"
+        :label="$t('message.username')"
         label-for="username-input"
         invalid-feedback="Name and Password are required."
       >
@@ -38,7 +38,7 @@
         ></b-form-input>
       </b-form-group>
       <b-form-group
-        label="Password"
+        :label="$t('message.password')"
         label-for="password-input"
         invalid-feedback="Invalid Password"
         :state="pwdState"

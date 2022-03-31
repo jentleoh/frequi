@@ -32,6 +32,7 @@
     "vue-demi": "0.12.4",
     "vue-echarts": "^6.0.2",
     "vue-grid-layout": "^2.3.12",
+    "vue-i18n": "8",
     "vue-material-design-icons": "^5.0.0",
     "vue-property-decorator": "^9.1.2",
     "vue-router": "^3.5.3",
@@ -40,8 +41,8 @@
     "vuex-composition-helpers": "^1.1.0"
   },
   "devDependencies": {
-    "@cypress/vue": "^2.2.3",
     "@cypress/vite-dev-server": "^2.2.2",
+    "@cypress/vue": "^2.2.3",
     "@types/echarts": "^4.9.13",
     "@types/jest": "^27.4.1",
     "@typescript-eslint/eslint-plugin": "^2.33.0",

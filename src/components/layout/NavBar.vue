@@ -3,7 +3,7 @@
     <b-navbar toggleable="sm" type="dark" variant="primary">
       <router-link class="navbar-brand" exact to="/">
         <img class="logo" src="@/assets/freqtrade-logo.png" alt="Home Logo" />
-        <span class="navbar-brand-title d-sm-none d-md-inline">Freqtrade UI</span>
+        <span class="navbar-brand-title d-sm-none d-md-inline">{{ $t('message.sitetitle') }}</span>
       </router-link>
 
       <!-- TODO: For XS breakpoint, this should be here...  -->
@@ -13,13 +13,13 @@
       <b-collapse id="nav-collapse" class="text-right text-md-center" is-nav>
         <b-navbar-nav>
           <router-link v-if="!canRunBacktest" class="nav-link navbar-nav" to="/trade"
-            >Trade</router-link
+            >{{ $t('message.trade') }}</router-link
           >
           <router-link v-if="!canRunBacktest" class="nav-link navbar-nav" to="/dashboard"
-            >Dashboard</router-link
+            >{{ $t('message.dashboard') }}</router-link
           >
-          <router-link class="nav-link navbar-nav" to="/graph">Chart</router-link>
-          <router-link class="nav-link navbar-nav" to="/logs">Logs</router-link>
+          <router-link class="nav-link navbar-nav" to="/graph">{{ $t('message.chart') }}</router-link>
+          <router-link class="nav-link navbar-nav" to="/logs">{{ $t('message.logs') }}</router-link>
           <router-link v-if="canRunBacktest" class="nav-link navbar-nav" to="/backtest"
             >Backtest</router-link
           >
