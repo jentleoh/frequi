@@ -71,7 +71,7 @@ export default defineComponent({
     // : Ref<EChartsOption>
     const dailyChartOptions = ref({
       title: {
-        text: 'Daily profit',
+        text: 'ks', //this.$t('message.dailystatus'),
         show: props.showTitle,
       },
       backgroundColor: 'rgba(0, 0, 0, 0)',

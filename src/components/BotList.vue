@@ -1,6 +1,6 @@
 <template>
   <div v-if="botCount > 0">
-    <h3 v-if="!small">Available bots</h3>
+    <h3 v-if="!small">{{ $t("message.ablebot") }}</h3>
     <b-list-group>
       <b-list-group-item
         v-for="bot in allAvailableBots"
@@ -20,7 +20,7 @@
         <bot-entry v-else :bot="bot" :no-buttons="small" @edit="editBot(bot.botId)" />
       </b-list-group-item>
     </b-list-group>
-    <LoginModal v-if="!small" class="mt-2" login-text="Add new bot" />
+    <LoginModal v-if="!small" class="mt-2" :login-text="$t('message.addbot')" />
   </div>
 </template>
 

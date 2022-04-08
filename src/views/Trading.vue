@@ -22,31 +22,31 @@
       :h="gridLayoutMultiPane.h"
       drag-allow-from=".card-header"
     >
-      <DraggableContainer header="Multi Pane">
+      <DraggableContainer :header="$t('message.multipanetitle')">
         <b-tabs content-class="mt-3" class="mt-1">
-          <b-tab title="Pairs combined" active>
+          <b-tab :title="$t('message.paircombi')" active>
             <PairSummary :pairlist="whitelist" :current-locks="currentLocks" :trades="openTrades" />
           </b-tab>
-          <b-tab title="General">
+          <b-tab :title="$t('message.general')">
             <div class="d-flex justify-content-center">
               <BotControls class="mt-1 mb-2" />
             </div>
             <BotStatus />
           </b-tab>
-          <b-tab title="Performance">
+          <b-tab :title="$t('message.performance')">
             <Performance class="performance-view" />
           </b-tab>
-          <b-tab title="Balance" lazy>
+          <b-tab :title="$t('message.balance')" lazy>
             <Balance />
           </b-tab>
-          <b-tab title="Daily Stats" lazy>
+          <b-tab :title="$t('message.dailystatus')" lazy>
             <DailyStats />
           </b-tab>
 
-          <b-tab title="Pairlist" lazy>
+          <b-tab :title="$t('message.pairlist')" lazy>
             <FTBotAPIPairList />
           </b-tab>
-          <b-tab title="Pair Locks" lazy>
+          <b-tab :title="$t('message.pairlocks')" lazy>
             <PairLockList />
           </b-tab>
         </b-tabs>
@@ -61,7 +61,7 @@
       :h="gridLayoutOpenTrades.h"
       drag-allow-from=".card-header"
     >
-      <DraggableContainer header="Open Trades">
+      <DraggableContainer :header="$t('message.opentrades')">
         <TradeList
           class="open-trades"
           :trades="openTrades"
@@ -80,7 +80,7 @@
       :h="gridLayoutTradeHistory.h"
       drag-allow-from=".card-header"
     >
-      <DraggableContainer header="Closed Trades">
+      <DraggableContainer :header="$t('message.closedtrades')">
         <TradeList
           class="trade-history"
           :trades="closedTrades"
@@ -114,7 +114,7 @@
       :min-h="6"
       drag-allow-from=".card-header"
     >
-      <DraggableContainer header="Chart">
+      <DraggableContainer :header="$t('message.tradingchart')">
         <CandleChartContainer
           :available-pairs="whitelist"
           :historic-view="!!false"

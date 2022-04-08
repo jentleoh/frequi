@@ -102,7 +102,7 @@ export default class CumProfitChart extends Vue {
   get chartOptions(): EChartsOption {
     const chartOptionsLoc: EChartsOption = {
       title: {
-        text: 'Cumulative Profit',
+        text: this.$t('message.cumulativeprofit'),
         show: this.showTitle,
       },
       backgroundColor: 'rgba(0, 0, 0, 0)',

@@ -61,15 +61,15 @@
                 <b-avatar size="2em" button>FT</b-avatar>
               </template>
               <b-dropdown-item>V: {{ getUiVersion }}</b-dropdown-item>
-              <router-link class="dropdown-item" to="/settings">Settings</router-link>
-              <b-checkbox v-model="layoutLockedLocal" class="pl-5">Lock layout</b-checkbox>
-              <b-dropdown-item @click="resetDynamicLayout">Reset Layout</b-dropdown-item>
+              <router-link class="dropdown-item" to="/settings">{{ $t('message.settings') }}</router-link>
+              <b-checkbox v-model="layoutLockedLocal" class="pl-5">{{ $t('message.layoutlock') }}</b-checkbox>
+              <b-dropdown-item @click="resetDynamicLayout">{{ $t('message.resetlayout') }}</b-dropdown-item>
               <router-link
                 v-if="botCount === 1"
                 class="dropdown-item"
                 to="/"
                 @click.native="clickLogout()"
-                >Sign Out</router-link
+                >{{ $t('message.signout') }}</router-link
               >
             </b-nav-item-dropdown>
             <div class="d-block d-sm-none">
@@ -84,13 +84,13 @@
                   </b-nav-text>
                 </div>
               </li>
-              <router-link class="nav-link navbar-nav" to="/settings">Settings</router-link>
+              <router-link class="nav-link navbar-nav" to="/settings">{{ $t('message.settings') }}</router-link>
               <router-link
                 v-if="botCount === 1"
                 class="nav-link navbar-nav"
                 to="/"
                 @click.native="clickLogout()"
-                >Sign Out</router-link
+                >{{ $t('message.signout') }}</router-link
               >
             </div>
           </li>

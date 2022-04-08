@@ -24,7 +24,9 @@
       :min-h="4"
       drag-allow-from=".drag-header"
     >
-      <DraggableContainer :header="`Daily Profit ${botCount > 1 ? 'combined' : ''}`">
+      <DraggableContainer
+        :header="botCount > 1 ? $t('message.dailyprofitcombi') : $t('message.dailyprofitcombi2')"
+      >
         <DailyChart
           v-if="allDailyStatsAllBots"
           :daily-stats="allDailyStatsAllBots"
@@ -42,7 +44,7 @@
       :min-h="4"
       drag-allow-from=".drag-header"
     >
-      <DraggableContainer header="Bot comparison">
+      <DraggableContainer :header="$t('message.botcomparison')">
         <bot-comparison-list />
       </DraggableContainer>
     </GridItem>
@@ -56,7 +58,7 @@
       :min-h="4"
       drag-allow-from=".drag-header"
     >
-      <DraggableContainer header="Open Trades">
+      <DraggableContainer :header="$t('message.opentrades')">
         <trade-list :active-trades="true" :trades="allOpenTradesAllBots" multi-bot-view />
       </DraggableContainer>
     </GridItem>
@@ -70,7 +72,7 @@
       :min-h="4"
       drag-allow-from=".drag-header"
     >
-      <DraggableContainer header="Cumulative Profit">
+      <DraggableContainer :header="$t('message.cumulativeprofit')">
         <CumProfitChart :trades="allTradesAllBots" :show-title="false" />
       </DraggableContainer>
     </GridItem>
@@ -84,7 +86,7 @@
       :min-h="4"
       drag-allow-from=".drag-header"
     >
-      <DraggableContainer header="Trades Log">
+      <DraggableContainer :header="$t('message.tradeslog')">
         <TradesLogChart :trades="allTradesAllBots" :show-title="false" />
       </DraggableContainer>
     </GridItem>
